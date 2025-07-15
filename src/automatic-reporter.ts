@@ -143,10 +143,8 @@ export class AutomaticReporter {
 
 			console.log(`${report.unusedEndpoints.length} unused endpoints detected.`);
 
-			// Send notifications
 			await this.sendNotifications(report);
 
-			// Generate HTML report
 			if (this.config.htmlReport?.enabled) {
 				await this.generateHtmlReport(report);
 			}

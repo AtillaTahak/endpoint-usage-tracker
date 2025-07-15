@@ -42,7 +42,6 @@ export interface EndpointStats {
 	averageResponseTime?: number;
 	statusCodes: { [key: string]: number };
 
-	// Performance metrics
 	performance?: PerformanceMetrics;
 }
 
@@ -64,7 +63,7 @@ export interface DashboardData {
 	mostUsedEndpoints: EndpointStats[];
 	leastUsedEndpoints: EndpointStats[];
 	unusedEndpoints: EndpointStats[];
-	slowEndpoints: EndpointStats[]; // New: slow endpoints
+	slowEndpoints: EndpointStats[];
 	timeRange: {
 		start: Date;
 		end: Date;
